@@ -107,32 +107,3 @@ movie_1 = Movie('The Seventh Seal', 'comedy', 'Ingmar Bergman', 1957)
 movie_2 = Movie('Home Alone', 'tragedy', 'Chris Columbus', 1990)
 movie_3 = Movie('Little Women', 'action thriller', 'Greta Gerwig', 2019)
 movie_4 = Movie('Galaxy Quest', 'historical documents', 'Dean Parisot', 1999)
-
-
-stream_serv_1 = StreamingService('Netflick')
-stream_serv_1.add_movie(movie_2)
-print("Streaming Service: "+stream_serv_1.get_name()+"\nCatalog:")
-catalogList = stream_serv_1.get_catalog()
-for m in catalogList:
-    print(m)
-
-
-stream_serv_2 = StreamingService('Hula')
-stream_serv_2.add_movie(movie_1)
-stream_serv_2.add_movie(movie_4)
-
-
-stream_serv_3 = StreamingService('Dizzy+')
-
-stream_serv_3.add_movie(movie_4)
-stream_serv_3.add_movie(movie_3)
-stream_serv_3.add_movie(movie_1)
-
-stream_guide = StreamingGuide()
-
-stream_guide.add_streaming_service(stream_serv_1)
-stream_guide.add_streaming_service(stream_serv_2)
-stream_guide.add_streaming_service(stream_serv_3)
-
-stream_guide.delete_streaming_service('Hula')
-
