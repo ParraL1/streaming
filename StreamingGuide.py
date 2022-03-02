@@ -74,7 +74,7 @@ class StreamingGuide:
             for movie in catalog:
                 if movie.get_title() == title:
                     if found == False:
-                        desired_movie = title + "("+str(movie.get_year())+")"
+                        desired_movie = title + "("+str (movie.get_year())+")"
                         result.append(desired_movie)
                         found = True
                     result.append(self._services[i].get_name())
