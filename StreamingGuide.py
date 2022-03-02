@@ -116,26 +116,10 @@ catalogList = stream_serv_1.get_catalog()
 for m in catalogList:
     print(m)
 
+
 stream_serv_2 = StreamingService('Hula')
 stream_serv_2.add_movie(movie_1)
 stream_serv_2.add_movie(movie_4)
-
-print("\nStreaming Service: "+stream_serv_2.get_name()+"\nCatalog:")
-catalogList = stream_serv_2.get_catalog()
-for m in catalogList:
-    print(m)
-
-stream_serv_2.delete_movie('The Seventh Seal')
-print("\nAfter deleting 'The Seventh Seal', "+stream_serv_2.get_name()+"'s catalog - ")
-catalogList = stream_serv_2.get_catalog()
-for m in catalogList:
-    print(m)
-
-stream_serv_2.add_movie(movie_2)
-print("\nAfter adding 'Home Alone', "+stream_serv_2.get_name()+"'s catalog - ")
-catalogList = stream_serv_2.get_catalog()
-for m in catalogList:
-    print(m)
 
 
 stream_serv_3 = StreamingService('Dizzy+')
@@ -143,12 +127,6 @@ stream_serv_3 = StreamingService('Dizzy+')
 stream_serv_3.add_movie(movie_4)
 stream_serv_3.add_movie(movie_3)
 stream_serv_3.add_movie(movie_1)
-
-print("\nStreaming Service: "+stream_serv_3.get_name()+"\nCatalog:")
-catalogList = stream_serv_3.get_catalog()
-for m in catalogList:
-    print(m)
-
 
 stream_guide = StreamingGuide()
 
@@ -158,7 +136,3 @@ stream_guide.add_streaming_service(stream_serv_3)
 
 stream_guide.delete_streaming_service('Hula')
 
-
-search_results = stream_guide.where_to_watch('Little Women')
-print("\nStreaming services that shows 'Little Women'")
-print(search_results)
