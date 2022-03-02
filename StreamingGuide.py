@@ -30,7 +30,7 @@ class Movie:
 
 
     def __str__(self):
-        return self._title+"("+str(self._year)+"), Director: "+self._director+", Genre: "+self._genre
+        return self._title+ "("+str (self._year)+"), Director: "+self._director+", Genre: "+self._genre
 
 # StreamingService
 class StreamingService:
