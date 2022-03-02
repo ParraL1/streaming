@@ -30,7 +30,7 @@ class Movie:
 
 
     def __str__(self):
-        return self._title + "("+str (self._year) +"), Director: "+self._director+", Genre: "+self._genre
+        return self._title + "(" +str (self._year) +"), Director: "+self._director+", Genre: "+self._genre
 
 # StreamingService
 class StreamingService:
@@ -74,7 +74,7 @@ class StreamingGuide:
             for movie in catalog:
                 if movie.get_title() == title:
                     if found == False:
-                        desired_movie = title + "("+str (movie.get_year ( )) +")"
+                        desired_movie = title + "("+ str (movie.get_year ( )) +")"
                         result.append(desired_movie)
                         found = True
                     result.append(self._services[i].get_name())
